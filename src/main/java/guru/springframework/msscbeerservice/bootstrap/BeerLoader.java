@@ -3,10 +3,13 @@ package guru.springframework.msscbeerservice.bootstrap;
 import guru.springframework.msscbeerservice.domain.Beer;
 import guru.springframework.msscbeerservice.repository.BeerRepository;
 import guru.springframework.msscbeerservice.web.model.BeerStyleEnum;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
+@Component
 public class BeerLoader implements CommandLineRunner {
 
     public static final String BEER_1_UPC = "0631234200036";
@@ -15,6 +18,7 @@ public class BeerLoader implements CommandLineRunner {
 
     private final BeerRepository beerRepository;
 
+    @Autowired
     public BeerLoader(BeerRepository beerRepository) {
         this.beerRepository = beerRepository;
     }

@@ -5,6 +5,7 @@ import guru.springframework.msscbeerservice.repository.BeerRepository;
 import guru.springframework.msscbeerservice.web.mappers.BeerMapper;
 import guru.springframework.msscbeerservice.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -13,7 +14,11 @@ import java.util.UUID;
 @Service
 public class BeerServiceImpl implements BeerService{
 
+
+    @Autowired
     private final BeerRepository beerRepository;
+
+    @Autowired
     private final BeerMapper beerMapper;
 
     @Override
