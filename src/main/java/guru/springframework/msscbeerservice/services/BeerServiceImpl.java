@@ -2,10 +2,10 @@ package guru.springframework.msscbeerservice.services;
 
 import guru.springframework.msscbeerservice.domain.Beer;
 import guru.springframework.msscbeerservice.repository.BeerRepository;
+import guru.springframework.msscbeerservice.web.controller.NotFoundException;
 import guru.springframework.msscbeerservice.web.mappers.BeerMapper;
 import guru.springframework.msscbeerservice.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -15,10 +15,8 @@ import java.util.UUID;
 public class BeerServiceImpl implements BeerService{
 
 
-    @Autowired
-    private final BeerRepository beerRepository;
 
-    @Autowired
+    private final BeerRepository beerRepository;
     private final BeerMapper beerMapper;
 
     @Override

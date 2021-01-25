@@ -1,5 +1,8 @@
 guru\springframework\msscbeerservice\bootstrap\BeerLoader.class
+guru\springframework\msscbeerservice\services\BeerService.class
+guru\springframework\msscbeerservice\web\controller\NotFoundException.class
 guru\springframework\msscbeerservice\web\model\BeerStyleEnum.class
+guru\springframework\msscbeerservice\services\BeerServiceImpl.class
 guru\springframework\msscbeerservice\web\model\BeerDto.class
 guru\springframework\msscbeerservice\web\model\BeerPagedList.class
 guru\springframework\msscbeerservice\web\model\BeerDto$BeerDtoBuilder.class

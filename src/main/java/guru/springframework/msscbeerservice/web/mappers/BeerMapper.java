@@ -6,7 +6,7 @@ import guru.springframework.msscbeerservice.domain.Beer;
 import guru.springframework.msscbeerservice.web.model.BeerDto;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 @Mapper(uses = {DateMapper.class})
 public interface BeerMapper {
 

@@ -3,6 +3,7 @@ package guru.springframework.msscbeerservice.web.controller;
 import guru.springframework.msscbeerservice.services.BeerService;
 import guru.springframework.msscbeerservice.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -15,7 +16,7 @@ import java.util.UUID;
 @RequestMapping("/api/v1/beer")
 public class BeerController {
 
-
+    @Autowired
     private final BeerService beerService;
 
     @GetMapping("/{beerId}")
