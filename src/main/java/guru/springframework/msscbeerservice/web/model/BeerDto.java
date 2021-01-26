@@ -21,7 +21,7 @@ import java.util.UUID;
 @Builder
 public class BeerDto implements Serializable {
 
-    static final long serialVersionUID = -5815566940065181210L;
+    static final long serialVersionUID = 3419032725595906136L;
 
     @Null
     private UUID id;
