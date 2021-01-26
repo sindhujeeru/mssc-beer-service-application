@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 @Slf4j
-@ConfigurationProperties(prefix = "sfg.brewery", ignoreUnknownFields = true)
+@ConfigurationProperties(prefix = "sfg.brewery", ignoreUnknownFields = false)
 @Component
 public class BeerInventoryServiceRestTemplateImpl implements BeerInventoryService{
 
@@ -39,7 +39,7 @@ public class BeerInventoryServiceRestTemplateImpl implements BeerInventoryServic
 
         ResponseEntity<List<BeerInventoryDto>> responseEntity =
                 restTemplate.exchange(beerInventoryServiceHost + INVENTORY_PATH,
-                        HttpMethod.GET, null,
+                        HttpMethod.GET,null,
                         new ParameterizedTypeReference<List<BeerInventoryDto>>(){},
                         (Object) beerId);
         Integer onHand = Objects.requireNonNull(responseEntity.getBody())

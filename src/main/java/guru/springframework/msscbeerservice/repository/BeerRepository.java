@@ -13,7 +13,7 @@ import java.util.UUID;
 
 public interface BeerRepository extends PagingAndSortingRepository<Beer, UUID> {
 
-    Page<Beer> findAllByBeerNameAndBeerStyle(String beername, BeerStyleEnum beerStyle, Pageable pageable);
+    Page<Beer> findAllByBeerNameAndBeerStyle(String beerName, BeerStyleEnum beerStyle, Pageable pageable);
 
     Page<Beer> findAllByBeerStyle(BeerStyleEnum beerStyle, Pageable pageable);
 
